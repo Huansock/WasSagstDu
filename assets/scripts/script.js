@@ -30,10 +30,10 @@ const message = async (fin_text, interim, isfinal) => {
 // 브라우저 체킹 함수
 function checkCompatibility() {
     if (!recognition) {
-        document.getElementById("available").innerHTML = ("음성인식 사용불가 /아이폰사파리 혹은 노트북 크롬브라우저로 입장하시길 바랍니다. ")
+        document.getElementById("available").innerHTML = ("Spracherkennung nicht möglich / Bitte eintreten Sie mit dem Laptop zum Chrom-Browser. ")
 
     } else {
-        document.getElementById("available").innerHTML = ("음성인식 사용가능 ")
+        document.getElementById("available").innerHTML = ("Spracherkennung verfügbar ")
 
     }
 }

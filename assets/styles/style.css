@@ -1,5 +1,5 @@
 #body{
-    background-color:rgb(241, 252, 242);
+    background-color:rgb(252, 241, 252);
 }
 
 #contents{
@@ -26,6 +26,7 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 #translated{
+    align-items:center;
     margin-top:20px;
     margin: 0 auto;
     max-width:500px;
@@ -35,5 +36,7 @@
 }
 #footer{
     position : fixed; bottom:0;
+    align-items:center;
+    margin: 0 auto;
     text-align:center;
 }
