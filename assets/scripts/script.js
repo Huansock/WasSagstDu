@@ -1,30 +1,19 @@
-//  var fetch = require('node-fetch')
-const One = document.getElementById("contents")
-const 요청키 = String(One.dataset.id)
+const socket = io();
 
 let SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
 const recognition = new SpeechRecognition()
+
+function 한국어집어넣기(한국어번역) {
+    document.getElementById('translated').innerHTML = 한국어번역;
+}
 
 // 메세지를 주는 함수
 const message = async (fin_text, interim, isfinal) => {
     let text = `${fin_text || interim}`
     document.getElementById('script').innerHTML = text;
     if (isfinal) {
-        const response = await fetch(`https://translation.googleapis.com/language/translate/v2?key=${요청키}`, {
-            method: "POST",
-            body: JSON.stringify({
-                "q": fin_text,
-                "target": "ko",
-            })
-        })
-
-        const 번역 = await response.json();
-        const 독어번역 = 번역["data"]["translations"][0]["translatedText"]
-        document.getElementById('translated').innerHTML = 독어번역;
-
+        socket.emit("german", fin_text, 한국어집어넣기)
     }
-
-
 }
 
 // 브라우저 체킹 함수
