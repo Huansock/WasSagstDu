@@ -24,6 +24,7 @@
     "node-fetch": "^3.0.0",
     "nodemon": "^2.0.13",
     "pug": "^3.0.2",
+    "sitemap-generator-cli": "^7.5.0",
     "socket.io": "^4.2.0"
   }
 }

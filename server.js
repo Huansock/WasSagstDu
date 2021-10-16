@@ -8,6 +8,7 @@ import {
     Server
 } from "socket.io";
 import fetch from "node-fetch";
+const __dirname = path.resolve();
 const app = express()
 const port = process.env.PORT || 4000
 
@@ -37,5 +38,20 @@ app.use("/static", express.static("assets"));
 app.set('view engine', 'pug');
 app.set('views', './views');
 app.get('/', (req, res) => res.render("index"))
+app.get('/Howto', (req, res) => res.render("Howto"))
+app.get('/Usage', (req, res) => res.render("Usage"))
+
+//robots txt
+app.get("/robots.txt", (req, res) => {
+    res.type("text/plain");
+    res.sendFile(
+        __dirname + "/robots.txt"
+    );
+});
+
+// sitemap
+app.get('/sitemap.xml', function (req, res) {
+    res.sendFile(__dirname + "/sitemap.xml");
+});
 
 httpServer.listen(port, () => console.log(`Example app listening on port port!`))
