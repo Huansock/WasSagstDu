@@ -107,34 +107,34 @@ input:hover {
 #AndWeb{
     outline-style: inset; outline-color: rgb(255, 234, 226);
 }
-@media screen and (max-width: 850px) { 
-    .description{
-        display: flex;
-        flex-direction: column;
-        justify-content:space-between;
-        margin-bottom: 100px;
-        align-items:center;
+@media screen and (max-width: 650px) { 
+.description{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    margin-bottom: 100px;
+    align-items:center;
 
-    }
-    .description_script{
-        margin-top:40px;
-        width:300px;
-    }
-    h2{
-        text-align:center;
-    }
-    .description img {
-        width:300px;
-    }
-    #backtohome{
-        margin-top: 10px;
-        margin-left:10px;
-    }
-    #caution{
-        margin-bottom: 100px;
-        margin: 10px;
-    }
-    #Usage p{
-        font-size:20px;
-    }
+}
+.description_script{
+    margin-top:40px;
+    width:300px;
+}
+h2{
+    text-align:center;
+}
+.description img {
+    width:300px;
+}
+#backtohome{
+    margin-top: 10px;
+    margin-left:10px;
+}
+#caution{
+    margin-bottom: 100px;
+    margin: 10px;
+}
+#Usage p{
+    font-size:20px;
+}
  }
