@@ -54,5 +54,8 @@ app.get("/robots.txt", (req, res) => {
 app.get('/sitemap.xml', function (req, res) {
     res.sendFile(__dirname + "/sitemap.xml");
 });
+app.get('/naver307e9f05f000f5cd6ea9c294b9c5df68.html', function (req, res) {
+    res.sendFile(__dirname + "/naver307e9f05f000f5cd6ea9c294b9c5df68.html");
+});
 
 httpServer.listen(port, () => console.log(`Example app listening on port port!`))
